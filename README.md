@@ -1,3 +1,3 @@
-# cyrillewcombettes.github.io
+# My homepage
 
-My homepage: https://cyrillewcombettes.github.io/
+https://cyrillewcombettes.github.io/
