@@ -3,65 +3,171 @@
 <html>
 
 <head>
-<title>Cyrille W. Combettes - Homepage</title>
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyrille W. Combettes - Homepage</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        a{text-decoration:none}
+        a:focus{outline:0 !important}
+        a:hover{text-decoration:underline}
+	
+        .stretch{text-align:justify; margin-top:50px}
+        .stretch:after{content:""; display:inline-block; width:100%}
+
+        .myButton{
+            background-color:#E6FFC0;
+            border:1px solid #FFFFFF;
+            display:inline-block;
+            cursor:pointer;
+            color:#000000;
+            font-family:verdana;
+            font-size:16px;
+            padding:8px 20px;
+        }
+        .myButton:active{background-color:#C1E1EC}
+        .myButton:focus{outline:0 !important}
+        .myButton:hover{text-decoration:underline}
+        .myButton::-moz-focus-inner{border:0}
+    </style>
 </head>
 
 <body bgcolor="#FFFFFF" style="font-family:verdana; margin:auto; max-width:630px; padding:20px">
 
 <div class="row">
-<div class="column">
-<img src="photo.jpg" alt="photo" style="width:190px; height:190px; float:right">
+    <div class="column">
+        <img src="photo.jpg" alt="photo" style="width:180px; height:180px; float:right">
+    </div>
+
+    <div class="column">
+        <h1>Cyrille W. Combettes</h1>
+        
+        <p>Ph.D. candidate in Machine Learning<br>
+        Georgia Institute of Technology</p>
+        <p><a href="https://www.linkedin.com/in/cyrille-combettes">LinkedIn</a></p>
+        <p>[myfirstname]@gatech.edu</p>
+    </div>
 </div>
 
-<div class="column">
-<h1>Cyrille W. Combettes</h1>
-<p>Ph.D. candidate in Machine Learning<br>
-Georgia Institute of Technology</p>
-<p><a href="https://www.linkedin.com/in/cyrille-combettes">LinkedIn</a></p>
-<p>[myfirstname]@gatech.edu</p>
-</div>
-</div>
-
-<h2>About me</h2>
-
-<div style="text-align:justify">
-<p>I am a second-year Ph.D. candidate in Machine Learning at Georgia Tech, advised by <a href="http://www.pokutta.com">Sebastian Pokutta</a>. My research interests lie at the intersection of optimization and machine learning. I am currently working on designing fast and sparse methods in convex optimization.</p>
-<p>I received a M.Sc. in Applied Mathematics from &Eacute;cole Centrale Paris and a Master of Business Analytics from MIT. Prior to joining Georgia Tech, I have worked on multiple real-world analytics projects, including as a Data Scientist Intern at BCG GAMMA and as a Research Assistant at MIT's Operations Research Center.</p>
+<div class="stretch">
+    <button class="myButton" onclick="openTab('Bio')" id="defaultOpen">Bio</button>
+    <button class="myButton" onclick="openTab('Publications')">Publications</button>
+    <button class="myButton" onclick="openTab('Talks')">Talks</button>
+    <button class="myButton" onclick="openTab('Education')">Education</button>
+    <button class="myButton" onclick="openTab('Misc')">Misc</button>
 </div>
 
-<h2>Publications</h2>
+<div id="Bio" class="tabContent">
+    <h2>Bio</h2>
+    
+    <div style="text-align:justify">
+        <p>I am a second-year Ph.D. candidate in Machine Learning at Georgia Tech, advised by <a href="http://www.pokutta.com">Sebastian Pokutta</a>. My research interests lie at the intersection of optimization and machine learning. I currently work on designing fast and practical algorithms for convex optimization.</p>
+        <p>I received a M.Sc. in Applied Mathematics from &Eacute;cole Centrale Paris and a Master of Business Analytics from MIT. Prior to joining Georgia Tech, I have worked on multiple real-world analytics projects, including as a Data Scientist Intern at BCG GAMMA and as a Research Assistant at MIT&#39;s Operations Research Center.</p>
+    </div>
+</div>
 
-<ul>
-<li><strong>Revisiting the Approximate Carath&eacute;odory Problem via the Frank-Wolfe Algorithm</strong><br>
-Cyrille W. Combettes and Sebastian Pokutta<br>
-<em>arXiv preprint arXiv:1911.04415</em>, 2019<br>
-  [<a href="https://arxiv.org/pdf/1911.04415.pdf">paper</a>] [<a href="https://colab.research.google.com/drive/1GLGRTc2jFYy9CqqoVnZgIFVQgAC0c3aZ">code</a>] [<a href="approx-cara_slides.pdf">slides</a>]</li><br>
+<div id="Publications" class="tabContent">
+    <h2>Publications</h2>
 
-<li><strong>Blended Matching Pursuit</strong><br>
-Cyrille W. Combettes and Sebastian Pokutta<br>
-In <em>Advances in Neural Information Processing Systems</em> (NeurIPS), 2019<br>
-[<a href="bmp_neurips.pdf">paper</a>] [<a href="https://colab.research.google.com/drive/1CXvhCknJ_uP7WhKmCALm7fCQZH21R9bI">code</a>] [<a href="bmp_slides.pdf">slides</a>] [<a href="bmp-poster.pdf">poster</a>]</li>
-</ul>
+    <ul><li>
+    <strong>Boosting Frank-Wolfe by Chasing Gradients</strong> <em style="background-color:#FFFF00; padding:0px 3px">new</em><br>
+    C. W. Combettes and S. Pokutta<br>
+    <em>Preprint arXiv:2003.06369</em>, 2020<br>
+    [<a href="https://arxiv.org/pdf/2003.06369.pdf">paper</a>] [<a href="https://colab.research.google.com/drive/1TSOVjDFF1X2ADBo_adHLsUVrblSutRKw">code</a>]
+    </li></ul>
 
-<h2>Talks</h2>
+    <ul><li>
+    <strong>Revisiting the Approximate Carath&eacute;odory Problem via the Frank-Wolfe Algorithm</strong><br>
+    C. W. Combettes and S. Pokutta<br>
+    <em>Preprint arXiv:1911.04415</em>, 2019<br>
+    [<a href="https://arxiv.org/pdf/1911.04415.pdf">paper</a>] [<a href="https://colab.research.google.com/drive/1GLGRTc2jFYy9CqqoVnZgIFVQgAC0c3aZ">code</a>] [<a href="approx-cara_slides.pdf">slides</a>]
+    </li></ul>
 
-<ul>
-<li><strong>Blended Matching Pursuit</strong><br>
-Conference on Neural Information Processing Systems (NeurIPS)<br>
-Vancouver (Canada), December 2019<br>
-[<a href="https://nips.cc">web</a>] [<a href="bmp-poster.pdf">poster</a>]</li><br>
+    <ul><li>
+    <strong>Blended Matching Pursuit</strong><br>
+    C. W. Combettes and S. Pokutta<br>
+    <em>Advances in Neural Information Processing Systems</em> (NeurIPS), 2019<br>
+    [<a href="https://papers.nips.cc/paper/8478-blended-matching-pursuit.pdf">paper</a>] [<a href="https://colab.research.google.com/drive/1CXvhCknJ_uP7WhKmCALm7fCQZH21R9bI">code</a>] [<a href="bmp_slides.pdf">slides</a>] [<a href="bmp-poster.pdf">poster</a>]
+    </li></ul>
+</div>
 
-<li><strong>Revisiting the Approximate Carath&eacute;odory Problem via the Frank-Wolfe Algorithm</strong><br>
-Conference on Data Science and Optimization<br>
-Toronto (Canada), November 2019<br>
-[<a href="http://www.fields.utoronto.ca/activities/19-20/c-dso">web</a>] [<a href="approx-cara_slides.pdf">slides</a>]</li><br>
+<div id="Talks" class="tabContent">
+    <h2>Talks</h2>
 
-<li><strong>Blended Matching Pursuit</strong><br>
-Workshop on Discrete Optimization and Machine Learning<br>
-Tokyo (Japan), July 2019<br>
-[<a href="http://www.cas.mcmaster.ca/~deza/tokyo2019.html">web</a>] [<a href="bmp_slides.pdf">slides</a>]</li>
-</ul>
+    <ul><li>
+    <strong>Blended Matching Pursuit</strong><br>
+    Conference on Neural Information Processing Systems (NeurIPS)<br>
+    Vancouver (Canada), December 2019<br>
+    [<a href="https://nips.cc/">web</a>] [<a href="bmp-poster.pdf">poster</a>]
+    </li></ul>
+
+    <ul><li>
+    <strong>Revisiting the Approximate Carath&eacute;odory Problem via the Frank-Wolfe Algorithm</strong><br>
+    Conference on Data Science and Optimization<br>
+    Toronto (Canada), November 2019<br>
+    [<a href="http://www.fields.utoronto.ca/activities/19-20/c-dso">web</a>] [<a href="approx-cara_slides.pdf">slides</a>]
+    </li></ul>
+
+    <ul><li>
+    <strong>Blended Matching Pursuit</strong><br>
+    Conference on Discrete Optimization and Machine Learning<br>
+    Tokyo (Japan), July 2019<br>
+    [<a href="http://www.cas.mcmaster.ca/~deza/tokyo2019.html">web</a>] [<a href="bmp_slides.pdf">slides</a>]
+    </li></ul>
+</div>
+
+<div id="Education" class="tabContent">
+    <h2>Education</h2>
+
+    <ul><li>
+    <strong>Georgia Institute of Technology</strong>, 2018-present<br>
+    Ph.D. in Machine Learning
+    </li></ul>
+
+    <ul><li>
+    <strong>Massachusetts Institute of Technology</strong>, 2017-2018<br>
+    Master of Business Analytics
+    </li></ul>
+
+    <ul><li>
+    <strong>&Eacute;cole Centrale Paris</strong>, 2015-2017<br>
+    M.Sc. in Applied Mathematics
+    </li></ul>
+
+    <ul><li>
+    <strong>Lyc&eacute;e Louis-le-Grand</strong>, 2009-2015
+    </li></ul>
+</div>
+
+<div id="Misc" class="tabContent">
+    <h2>Misc</h2>
+
+    <ul><li>
+    <strong>Soccer Intramurals</strong>
+    <ul>
+        <li>2-time winner (Centrale 2016, 2017)</li>
+        <li>2-time finalist (MIT 2018, Georgia Tech 2020)</li>
+    </ul>
+    </li></ul>
+
+    <ul><li>
+    <strong>Dean&#39;s Fellowship</strong>, MIT, 2017<br>
+    In recognition of outstanding academic record, personal achievements, and professional promise
+    </li></ul>
+
+    <ul><li>
+    <strong>Jean Gaillard Memorial Fellowship</strong>, &Eacute;cole Centrale Paris, 2017
+    </li></ul>
+</div>
+
+<script>
+function openTab(tabtitle) {
+    var i, tabContent;
+    tabContent = document.getElementsByClassName("tabContent");
+    for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none"}
+    document.getElementById(tabtitle).style.display = "block";
+}
+document.getElementById("defaultOpen").click();
+</script>
 
 </body>
 
