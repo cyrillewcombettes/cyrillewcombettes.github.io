@@ -5,6 +5,7 @@
 <head>
     <title>Cyrille W. Combettes - Homepage</title>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
     <style>
         a{text-decoration:none}
@@ -28,6 +29,10 @@
         .myButton:focus{outline:0 !important}
         .myButton:hover{text-decoration:underline}
         .myButton::-moz-focus-inner{border:0}
+
+        @media (max-width:610px) {#photo {display:none}}
+        @media (max-width:570px) {#desktopButtons {display:none}}
+        @media (min-width:570px) {#mobileButtons {display:none}}
     </style>
 </head>
 
@@ -35,7 +40,7 @@
 
 <div class="row">
     <div class="column">
-        <img src="photo.jpg" alt="photo" style="width:180px; height:180px; float:right">
+        <img id="photo" src="photo.jpg" alt="photo" style="width:180px; height:180px; float:right">
     </div>
 
     <div class="column">
@@ -43,16 +48,30 @@
         
         <p>Ph.D. candidate in Machine Learning<br>
         Georgia Institute of Technology</p>
-        <p><a href="https://www.linkedin.com/in/cyrille-combettes">LinkedIn</a></p>
+        
+        <p><a href="https://www.linkedin.com/in/cyrille-combettes"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        &nbsp;&nbsp;
+        <a href="https://github.com/cyrillewcombettes"><i class="fab fa-github"></i> GitHub</a>
+        &nbsp;&nbsp;
+        <a href="https://twitter.com/cyrillecbt"><i class="fab fa-twitter"></i> Twitter</a></p>
+        
         <p>[myfirstname]@gatech.edu</p>
     </div>
 </div>
 
-<div class="stretch">
+<div id="desktopButtons" class="stretch">
     <button class="myButton" onclick="openTab('Bio')" id="defaultOpen">Bio</button>
     <button class="myButton" onclick="openTab('Publications')">Publications</button>
     <button class="myButton" onclick="openTab('Talks')">Talks</button>
     <button class="myButton" onclick="openTab('Education')">Education</button>
+    <button class="myButton" onclick="openTab('Misc')">Misc</button>
+</div>
+
+<div id="mobileButtons" style="margin-top:25px">
+    <button class="myButton" onclick="openTab('Bio')" id="defaultOpen">Bio</button><br>
+    <button class="myButton" onclick="openTab('Publications')">Publications</button><br>
+    <button class="myButton" onclick="openTab('Talks')">Talks</button><br>
+    <button class="myButton" onclick="openTab('Education')">Education</button><br>
     <button class="myButton" onclick="openTab('Misc')">Misc</button>
 </div>
 
@@ -160,11 +179,11 @@
 </div>
 
 <script>
-function openTab(tabtitle) {
+function openTab(tabTitle) {
     var i, tabContent;
     tabContent = document.getElementsByClassName("tabContent");
     for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none"}
-    document.getElementById(tabtitle).style.display = "block";
+    document.getElementById(tabTitle).style.display = "block";
 }
 document.getElementById("defaultOpen").click();
 </script>
